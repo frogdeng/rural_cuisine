@@ -49,13 +49,15 @@ body
 
 
 .container
+	
 	+mobile-width
 		width: 100%
 		margin: 0 auto
 		padding: 0 20px
 	+pc-width
 		margin: 0 auto
-		background: #ddd
+		margin-bottom: 90px
+		// background: #ddd
 		display: flex
 		flex-direction: row
 		justify-content: flex-start
@@ -111,6 +113,43 @@ body
 	background: #c0c0c0
 	height: 550px
 
+.page
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	align-items: center
+	.pageinfo
+		width: 20%
+	.page_count	
+		width: 80%
+		display: flex
+		flex-direction: row
+		justify-content: flex-end
+		align-items: center
+		.page_num
+			display: block
+			width: 37px
+			height: 37px
+			margin: 0 5px
+			background: #dddddd
+			color: #888
+			display: flex
+			flex-direction: row
+			justify-content: center
+			align-items: center
+			transition: all .3s
+			&:hover
+				background: #0ba6d4
+				color: #FFF
+				cursor: pointer
+				
+			
+
+
+
+
+
 
 .content_item
 	width: 100%
@@ -121,7 +160,7 @@ body
 		display: flex
 		flex-direction: row
 		justify-content: flex-start
-		align-items: flex-start
+		align-items: center
 		margin-bottom: 20px		
 		.county
 			width: 51px
@@ -162,10 +201,13 @@ body
 			.item_text
 				width: 80%
 				h6
-					font-size: 30px
-					margin-bottom: 20px
+					font-size: 27px
+					margin-bottom: 18px
 				p
 					width: 100%
 					color: #888
-
-
+					overflow: hidden
+					text-overflow: ellipsis
+					display: -webkit-box
+					-webkit-line-clamp: 3
+					-webkit-box-orient: vertical
